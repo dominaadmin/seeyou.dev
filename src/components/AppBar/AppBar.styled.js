@@ -112,6 +112,9 @@ export const Header = styled.header`
   /* z-index: 1; */
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);
   ${({ theme }) => theme.device.desktop} {
+    position: fixed;
+    width: 100%;
+    background: white;
     padding-top: 16px;
     padding-bottom: 16px;
   }
