@@ -9,10 +9,11 @@ import {
   HeaderBox,
   LogoLink,
   HeaderContainer,
+  DownHeadDiv,
 } from './AppBar.styled';
 // import { Container } from '../Container/Container.styled';
 import Burger from '../Burger';
-import LogoSeeYou from '../../image/LogoSeeYou.svg';
+import LogoSeeYou from '../../image/seeyou_15_04.svg';
 import { useOnClickOutside } from '../../hooks/OnClickOutside';
 import MediaQuery from '../MediaQuery';
 import DownloadLink from '../DownloadLink';
@@ -54,19 +55,25 @@ const AppBar = () => {
                 Home
               </Link>
             </NavItem>
-            <NavItem>
-              <Link to="/ownership" onClick={toggleMenu}>
-                Co-ownership
-              </Link>
-            </NavItem>
+
             <NavItem>
               <Link to="/about" onClick={toggleMenu}>
                 About
               </Link>
             </NavItem>
             <NavItem>
-              <Link to="/help" onClick={toggleMenu}>
+              <Link to="/co-ownership" onClick={toggleMenu}>
+                Co-Ownership
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link to="/faq" onClick={toggleMenu}>
                 FAQ
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link to="/feature" onClick={toggleMenu}>
+                Terms & Conditions
               </Link>
             </NavItem>
           </NavList>
@@ -78,11 +85,13 @@ const AppBar = () => {
             </DownloadLink>
           </DownloadMobileFooter>
         </MediaQuery>
-        <MediaQuery device={'desktop'}>
-          <DownloadLink type="button" onClick={toggleModal}>
+        <DownHeadDiv>
+          <MediaQuery device={'desktop'}>
+          <DownloadLink href='mailto:hello@seeyou.eu?subject=Please add me to the SEEYOU pre-launch version 1.0.1 priority list" ' target="_self">
             Download
           </DownloadLink>
-        </MediaQuery>
+          </MediaQuery>
+        </DownHeadDiv>
       </HeaderContainer>
       {showModal && <ModalForMail toggleModal={toggleModal} />}
     </Header>

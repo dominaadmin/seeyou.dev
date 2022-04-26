@@ -4,13 +4,17 @@ import bcg from 'image/hero/hero_bg.svg';
 // import DownloadLink from '../DownloadLink';
 
 export const HeroSection = styled.section`
-  padding: 151px 0px;
+  margin-top:-75px;
+  padding-top: 100px;
+  padding-bottom: 250px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-image: url(${bcg});
 `;
-
+export const HeroImg = styled.img`
+  margin-top: 80px;
+`
 export const HeroContainer = styled(Container)`
   ${({ theme }) => theme.device.desktop} {
     width: 1270px;
@@ -34,6 +38,7 @@ export const HeroThumb = styled.div`
     width: 746px;
     height: 465px;
     margin-right: -50px;
+    margin-top: 50px;
   }
 `;
 
@@ -41,7 +46,8 @@ export const HeroTitle = styled.h1`
   font-family: ${({ theme }) => theme.fonts.title.bold};
   font-size: 45px;
   line-height: 1.2;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
+  margin-top: 163px;
   color: ${({ theme }) => theme.colors.black_btn};
 `;
 
